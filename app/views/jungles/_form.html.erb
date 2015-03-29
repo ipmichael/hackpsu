@@ -1,0 +1,25 @@
+<%= form_for(@jungle) do |f| %>
+  <% if @jungle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jungle.errors.count, "error") %> prohibited this jungle from being saved:</h2>
+
+      <ul>
+      <% @jungle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :monkey %><br>
+    <%= f.text_field :monkey %>
+  </div>
+  <div class="field">
+    <%= f.label :eats %><br>
+    <%= f.text_field :eats %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

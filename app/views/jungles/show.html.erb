@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Monkey:</strong>
+  <%= @jungle.monkey %>
+</p>
+
+<p>
+  <strong>Eats:</strong>
+  <%= @jungle.eats %>
+</p>
+
+<%= link_to 'Edit', edit_jungle_path(@jungle) %> |
+<%= link_to 'Back', jungles_path %>
